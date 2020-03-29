@@ -14,13 +14,14 @@ def retrivedValues():
     return GetValues()
 
 def getMvalue(month,leapYear):
+    Xmonth=[4,6,9,11]
     mValue=0
     if(int(month)==2):
         if(leapYear==True):
             mValue=29
         if(leapYear==False):
             mValue=28
-    elif (int(month)%2==0):
+    elif int(month) in Xmonth:
         mValue=30
     else:
         mValue=31
